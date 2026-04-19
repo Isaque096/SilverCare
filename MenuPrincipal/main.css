@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #9cc0c0;
+}
+.navbar {
+    background-color: #784954bb;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: opacity 0.3s;
+}
+
+.navbar a:hover {
+    opacity: 0.8;
+}
+
+.logo {
+    font-family: 'Pacifico', cursive;
+    font-size: 24px;
+    color: #fff;
+}
+
+.silverhome {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    padding-top: 0; 
+}
+
+.logo-container {
+    flex: 1;
+    width: 50%; /* METADE DA TELA */
+    height: auto;
+    background-color: #fdf7e6;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    border-radius: 0px 20px 450px 0px;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 8px;
+
+}
+
+.fundo-img {
+    flex: 1;
+    width: 50%;
+    height: auto;
+    background-color: #9cc0c0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.imagem1 {
+    width: 500px;
+    height: Auto;
+    margin-right: 250px;
+    margin-bottom: 20px;
+    border-radius: 100%;
+}
+
+
+.subtitle {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 18px;
+    color: #804d59;
+    margin-top: 0px;
+    width: 650px;
+}
+
+.button-info {
+    width: 200px;
+    height: 50px;
+    margin-top: 50px;
+    background-color: #784954bb;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.imagem2 {
+    width: 650px;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+    object-fit: cover;
+    border-radius: 100%;
+}
