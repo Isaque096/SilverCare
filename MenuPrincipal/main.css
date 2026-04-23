@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #9cc0c0;
+}
+
+.navbar {
+    background-color: #784954bb;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: opacity 0.3s;
+}
+
+.navbar a:hover {
+    opacity: 0.8;
+}
+
+.logo {
+    font-family: 'Pacifico', cursive;
+    font-size: 24px;
+    color: #fff;
+}
+
+.silverhome {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    padding-top: 0; 
+}
+
+.logo-container {
+    flex: 1;
+    width: 50%;
+    height: auto;
+    background-color: #fdf7e6;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 40px;
+    border-radius: 0px 450px 450px 0px;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 8px;
+    padding-top: 20px;
+}
+
+/* NOVO: CONTAINER QUE SEGURA IMAGEM E TEXTO JUNTOS */
+.image-wrapper {
+    position: relative;
+    display: inline-block;
+    width: auto;
+    margin-bottom: 30px;
+}
+
+/* NOVO: CONTEÚDO SOBREPOSTO À IMAGEM */
+.overlay-content {
+    position: absolute;
+    bottom: -80px;
+    left: 170px;
+    right: 0;
+    text-align: center;
+    padding: 20px;
+    border-radius: 0 0 100% 100%;
+}
+
+/* AJUSTE NO SUBTITLE */
+.subtitle {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 18px;
+    color: #804d59;
+    margin-top: 0;
+    margin-bottom: 15px;
+    width: auto;
+    max-width: 270px;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+.button-info:hover {
+    background-color: #5a3540;
+}
+
+.fundo-img {
+    flex: 1;
+    width: 50%;
+    height: auto;
+    background-color: #9cc0c0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+
+.imagem1 {
+    width: 650px;
+    height: auto;
+    margin-right: 250px;
+    margin-bottom: 20px;
+    border-radius: 100%;
+    max-width: 100%;
+}
+
+.button-info {
+    width: 200px;
+    height: 50px;
+    margin-left: -215px;
+    margin-top: 50px;
+    background-color: #784954bb;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.imagem2 {
+    width: 650px;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+/* RESPONSIVIDADE */
+
+/* TELAS MÉDIAS (tablets, notebooks pequenos) */
+@media (max-width: 1200px) {
+    .imagem1, .imagem2 {
+        width: 450px;  /* reduz tamanho das imagens */
+    }
+    
+    .imagem1 {
+        margin-right: 150px;  /* reduz o deslocamento */
+    }
+    
+    .button-info {
+        margin-left: -300px;  /* ajusta o botão para telas menores */
+    }
+}
+
+/* TELAS PEQUENAS (tablets em retrato) - ATÉ 992px */
+@media (max-width: 992px) {
+    .silverhome {
+        flex-direction: column;  /* empilha as colunas */
+        height: auto;
+    }
+    
+    .logo-container, .fundo-img {
+        width: 100%;  /* cada um ocupa 100% */
+        border-radius: 0px 0px 100px 0px;  /* ajusta borda */
+    }
+    
+    .imagem1, .imagem2 {
+        width: 350px;
+    }
+    
+    .imagem1 {
+        margin-right: 0;  /* remove margem direita */
+        margin-left: 50px;  /* centraliza um pouco */
+    }
+    
+    .overlay-content {
+        left: 0;  /* centraliza o conteúdo */
+    }
+    
+    .button-info {
+        margin-left: 0;  /* remove o deslocamento grande */
+    }
+    
+    .subtitle {
+        max-width: 300px;
+    }
+}
+
+/* TELAS MUITO PEQUENAS (celulares) - ATÉ 768px */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;  /* empilha logo e menu */
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .navbar a {
+        margin: 0 10px;  /* espaçamento entre links */
+    }
+    
+    .logo-container {
+        padding: 20px;
+        padding-top: 40px;
+    }
+    
+    .imagem1, .imagem2 {
+        width: 280px;
+    }
+    
+    .subtitle {
+        font-size: 14px;
+        max-width: 250px;
+    }
+    
+
+    .button-info {
+        width: 160px;
+        height: 40px;
+        font-size: 14px;
+    }
+    
+    .overlay-content {
+        bottom: -60px;
+        padding: 10px;
+    }
+}
+
+/* TELAS EXTRA PEQUENAS (celulares pequenos) - ATÉ 480px */
+@media (max-width: 480px) {
+    .logo {
+        font-size: 20px;
+    }
+    
+    .navbar a {
+        font-size: 12px;
+        margin: 0 5px;
+    }
+    
+    .imagem1, .imagem2 {
+        width: 220px;
+    }
+    
+    .subtitle {
+        font-size: 12px;
+        max-width: 200px;
+    }
+    
+    .button-info {
+        width: 140px;
+        height: 35px;
+        font-size: 12px;
+    }
+    
+    .logo-container {
+        border-radius: 0px 0px 80px 0px;
+    }
+}
