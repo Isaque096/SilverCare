@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #9cc0c0;
+    background-image: url('WhatsApp Image 2026-04-22 at 21.53.08.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+body {
+    background-position: center 0%;
+}
+
+.navbar {
+    background-color: #784954bb;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: opacity 0.3s;
+}
+
+.navbar a:hover {
+    opacity: 0.8;
+}
+
+.logo {
+    font-family: 'Pacifico', cursive;
+    font-size: 24px;
+    color: #fff;
+}
+
+.grid-servicos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas de largura igual */
+    gap: 25px; /* Espaçamento entre os cards */
+    max-width: 1200px;
+    margin: 0 auto; /* Centraliza o grid na página */
+    padding: 20px;
+}
+
+/* Estilização dos cards */
+.card-servicos {
+    background-color: #fdf7e6ff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-servicos:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-servicos h3 {
+    color: #784954;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+    border-bottom: 2px solid #784954; /* Cria uma linha separando o título do conteúdo */
+    padding-bottom: 8px;
+}
+
+.card-servicos ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.card-servicos li {
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+    color: #333;
+}
+
+.card-servicos li::before {
+    content: "•";
+    color: #784954;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+/* Responsivo: Em telas menores, vira 2 colunas */
+@media (max-width: 768px) {
+    .grid-servicos {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        padding: 15px;
+    }
+}
+
+/* Em telas muito pequenas, vira 1 coluna */
+@media (max-width: 480px) {
+    .grid-servicos {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Mantém o título centralizado */
+.servicos h1 {
+    text-align: center;
+    color: rgb(115, 70, 70);
+    margin-bottom: 20px;
+    font-size: 2rem;
+    padding-top: 20px;
+    text-shadow: 2px 2px 4px rgba(133, 87, 87, 0.427);
+}
+
+/* Ajuste do botão e aviso */
+.container-botao {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+}
+
+.container-botao h2 {
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.btn-forms {
+    background-color: #784954;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    border-radius: 25px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-forms:hover {
+    background-color: #5a3540;
+}
+
+.aviso {
+    margin-top: 15px;
+    font-size: 0.85rem;
+    color: #fff;
+    background-color: rgba(0,0,0,0.2);
+    display: inline-block;
+    padding: 8px 15px;
+    border-radius: 20px;
+}

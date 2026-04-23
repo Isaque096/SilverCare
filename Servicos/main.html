@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>SilverCare</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap">
+    <link rel='stylesheet' href='main.css'>
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">SilverCare</div>
+        <nav>
+            <a href="../MenuPrincipal/main.html">Home</a>
+            <a href='#Suporte'>Suporte</a>
+            <a href='#Servicos'>Serviços</a>
+            <a href='#Agenda'>Agenda</a>
+            <a href='#Empresa'>Empresa</a>
+        </nav>
+    </header>
+    <section id="Servicos" class="servicos">
+        <h1>Nossos Serviços</h1>
+        <div class="grid-servicos">
+            <div class="card-servicos">
+                <h3>Assistência de Enfermagem</h3>
+                <ul>
+                    <li>Administração de Medicamentos</li>
+                    <li>Curativos simples e complexos</li>
+                    <li>Verificação de sinais vitais</li>
+                    <li>Controle glicêmico</li>
+                </ul>
+            </div>
+            <div class="card-servicos">
+                <h3>Cuidados com a mulher idosa</h3>
+                <ul>
+                    <li>Prevenção de lesões por pressão</li>
+                    <li>Cuidados com higiene íntima</li>
+                    <li>Orientação sobre alterações hormonais</li>
+                    <li>Suporte emocional e social</li>
+                    <li>Acompanhamento da saúde feminina</li>
+                </ul>
+            </div>
+            <div class="card-servicos">
+                <h3>Reabilitação e Prevenção</h3>
+                <ul>
+                    <li>Prevenção de quedas</li>
+                    <li>Estímulo à mobilidade</li>
+                    <li>Exercícios leves orientados</li>
+                </ul>
+            </div>
+            <div class="card-servicos">
+                <h3>Educação em Saúde</h3>
+                <ul>
+                    <li>Educação sobre prevenção de doenças</li>
+                    <li>Orientação para familiares</li>
+                    <li>Uso correto de medicamentos</li>
+                    <li>Alimentação saudável</li>
+                    <li>Cuidados com doenças crônicas</li>
+                </ul>
+            </div>
+            <div class="card-servicos">
+                <h3>Cuidados Paliativos</h3>
+                <ul>
+                    <li>Controle da dor</li>
+                    <li>Conforto e qualidade de vida</li>
+                    <li>Apoio emocional à paciente e família</li>
+                </ul>
+            </div>
+            <div class="card-servicos">
+                <h3>Atendimento Online</h3>
+                <ul>
+                    <li>Consulta de enfermagem online</li>
+                    <li>Teleconsulta de acompanhamento</li>
+                    <li>Acompanhamento remoto</li>
+                </ul>
+            </div>
+        </div>
+        <div class="container-botao">
+            <h2>Monte seu plano de cuidados</h2>
+            <button class="btn-forms" onclick="abrirFormulario()">
+                Formulário
+            </button>
+            <br>
+            <div class="aviso">
+                 Você será redirecionado para o Google Forms. Faça login com sua conta Google para agendar.
+            </div>
+        </div>
+    </section>
+    <script>
+        function abrirFormulario() {
+           const LinkFormulario = "https://docs.google.com/forms/d/e/1FAIpQLSdb09kSWWJHdEmM-NHcX7RfPZ4zGepj25OhIJjNr_AwIrq_Jg/viewform";
+           window.open(LinkFormulario, "_blank");
+        }
+    </script>
+
+</body>
+</html>
