@@ -22,6 +22,13 @@ body {
     align-items: center;
 }
 
+.navbar a.active {
+    font-weight: bold;
+    text-decoration: underline;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
 .navbar a {
     color: #fff;
     text-decoration: none;
@@ -78,12 +85,13 @@ body {
 /* NOVO: CONTEÚDO SOBREPOSTO À IMAGEM */
 .overlay-content {
     position: absolute;
-    bottom: -80px;
-    left: 170px;
-    right: 0;
+    bottom: 0;
+    left: 50%;  /* centraliza horizontalmente */
+    transform: translateX(-50%);  /* ajusta o centro exato */
     text-align: center;
     padding: 20px;
-    border-radius: 0 0 100% 100%;
+    width: 100%;
+    max-width: 300px;
 }
 
 /* AJUSTE NO SUBTITLE */
@@ -91,10 +99,8 @@ body {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 18px;
     color: #804d59;
-    margin-top: 0;
     margin-bottom: 15px;
-    width: auto;
-    max-width: 270px;
+    width: 100%;
     text-align: center;
     font-weight: bold;
 }
@@ -119,17 +125,19 @@ body {
 .imagem1 {
     width: 650px;
     height: auto;
-    margin-right: 250px;
+    /* REMOVA margin-right: 250px; */
     margin-bottom: 20px;
     border-radius: 100%;
     max-width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .button-info {
     width: 200px;
     height: 50px;
-    margin-left: -215px;
-    margin-top: 50px;
+    /* REMOVA margin-left e margin-top problemáticos */
     background-color: #784954bb;
     color: #fff;
     border: none;
@@ -138,6 +146,8 @@ body {
     font-size: 16px;
     border-radius: 5px;
     transition: background-color 0.3s;
+    display: block;
+    margin: 0 auto;  /* centraliza horizontalmente */
 }
 
 .imagem2 {
@@ -175,7 +185,7 @@ body {
     
     .logo-container, .fundo-img {
         width: 100%;  /* cada um ocupa 100% */
-        border-radius: 0px 0px 100px 0px;  /* ajusta borda */
+        border-radius: 0px 0px 0px 0px;  /* remove bordas arredondadas */
     }
     
     .imagem1, .imagem2 {
@@ -213,6 +223,7 @@ body {
     }
     
     .logo-container {
+        border-radius: 0px 0px 0px 0px;  /* remove bordas arredondadas */
         padding: 20px;
         padding-top: 40px;
     }
@@ -266,6 +277,6 @@ body {
     }
     
     .logo-container {
-        border-radius: 0px 0px 80px 0px;
+        border-radius: 0px 0px 0px 0px;
     }
 }

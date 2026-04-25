@@ -11,9 +11,9 @@ body {
     margin: 0;
     padding: 0;
     background-color: #9cc0c0;
-    background-image: url('WhatsApp Image 2026-04-22 at 21.53.08.jpeg');
+    background-image: url('WhatsApp Image 2026-04-22 at 21.53.08 (1).jpeg');
     background-size: cover;
-    background-position: center 0%;
+    background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
@@ -51,8 +51,8 @@ body {
     color: #fff;
 }
 
-.grid-servicos {
-    display: grid;
+.grid-info {
+     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 colunas de largura igual */
     gap: 25px; /* Espaçamento entre os cards */
     max-width: 1200px;
@@ -60,8 +60,7 @@ body {
     padding: 20px;
 }
 
-/* Estilização dos cards */
-.card-servicos {
+.card-info {
     background-color: #fdf7e6ff;
     border-radius: 12px;
     padding: 20px;
@@ -69,12 +68,12 @@ body {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.card-servicos:hover {
+.card-info:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.card-servicos h3 {
+.card-info h3 {
     color: #784954;
     margin-bottom: 15px;
     font-size: 1.3rem;
@@ -82,19 +81,19 @@ body {
     padding-bottom: 8px;
 }
 
-.card-servicos ul {
+.card-info ul {
     list-style-type: none;
     padding-left: 0;
 }
 
-.card-servicos li {
+.card-info li {
     margin-bottom: 8px;
     padding-left: 20px;
     position: relative;
     color: #333;
 }
 
-.card-servicos li::before {
+.card-info li::before {
     content: "•";
     color: #784954;
     position: absolute;
@@ -102,66 +101,10 @@ body {
     font-weight: bold;
 }
 
-/* Responsivo: Em telas menores, vira 2 colunas */
-@media (max-width: 768px) {
-    .grid-servicos {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-        padding: 15px;
-    }
-}
-
-/* Em telas muito pequenas, vira 1 coluna */
-@media (max-width: 480px) {
-    .grid-servicos {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* Mantém o título centralizado */
-.servicos h1 {
+.info-empresa h1 {
     text-align: center;
-    color: rgb(115, 70, 70);
+    color: #fdf7e6ff;
     margin-bottom: 20px;
     font-size: 2rem;
     padding-top: 20px;
-    text-shadow: 2px 2px 4px rgba(133, 87, 87, 0.427);
-}
-
-/* Ajuste do botão e aviso */
-.container-botao {
-    text-align: center;
-    margin-top: 40px;
-    padding: 20px;
-}
-
-.container-botao h2 {
-    color: #fff;
-    margin-bottom: 15px;
-}
-
-.btn-forms {
-    background-color: #784954;
-    color: white;
-    border: none;
-    padding: 12px 30px;
-    font-size: 1.1rem;
-    border-radius: 25px;
-    text-align: center;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.btn-forms:hover {
-    background-color: #5a3540;
-}
-
-.aviso {
-    margin-top: 15px;
-    font-size: 0.85rem;
-    color: #fff;
-    background-color: rgba(0,0,0,0.2);
-    display: inline-block;
-    padding: 8px 15px;
-    border-radius: 20px;
 }
