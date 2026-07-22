@@ -74,7 +74,7 @@ body {
     padding-top: 20px;
 }
 
-/* NOVO: CONTAINER QUE SEGURA IMAGEM E TEXTO JUNTOS */
+/* CONTAINER QUE SEGURA IMAGEM E TEXTO JUNTOS */
 .image-wrapper {
     position: relative;
     display: inline-block;
@@ -82,7 +82,7 @@ body {
     margin-bottom: 30px;
 }
 
-/* NOVO: CONTEÚDO SOBREPOSTO À IMAGEM */
+/* CONTEÚDO SOBREPOSTO À IMAGEM */
 .overlay-content {
     position: absolute;
     bottom: 0;
@@ -125,7 +125,6 @@ body {
 .imagem1 {
     width: 650px;
     height: auto;
-    /* REMOVA margin-right: 250px; */
     margin-bottom: 20px;
     border-radius: 100%;
     max-width: 100%;

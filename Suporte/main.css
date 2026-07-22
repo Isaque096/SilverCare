@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #9cc0c0;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background-image: url('Copilot_20260329_214842 (1).png');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+.navbar {
+    background-color: #784954bb;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar a.active {
+    font-weight: bold;
+    text-decoration: underline;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: opacity 0.3s;
+}
+
+.navbar a:hover {
+    opacity: 0.8;
+}
+
+.logo {
+    font-family: 'Pacifico', cursive;
+    font-size: 24px;
+    color: #fff;
+}
+
+.suporte {
+    padding: 20px;
+    color: rgb(255, 255, 255);
+}
+
+input[type="text"] {
+    width: 250px;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+button {
+    background-color: #784954;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+}
+
+button:hover {
+    background-color: #5a3a41;
+}
+
+li {
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.reclame-spt {
+    margin-top: 20px;
+    color: #fff;
+}
+ 
