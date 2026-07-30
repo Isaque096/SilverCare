@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #9cc0c0;
+    background-image: url('WhatsApp Image 2026-04-22 at 21.53.08 (1).jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    display: none; /* Chrome, Edge, Safari */
+}
+
+.navbar {
+    background-color: #784954bb;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar a.active {
+    font-weight: bold;
+    text-decoration: underline;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: opacity 0.3s;
+}
+
+.navbar a:hover {
+    opacity: 0.8;
+}
+
+.logo {
+    font-family: 'Pacifico', cursive;
+    font-size: 24px;
+    color: #fff;
+}
+
+.grid-info {
+     display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas de largura igual */
+    gap: 25px; /* Espaçamento entre os cards */
+    max-width: 1200px;
+    margin: 0 auto; /* Centraliza o grid na página */
+    padding: 20px;
+}
+
+.card-info {
+    background-color: #fdf7e6ff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-info:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-info h3 {
+    color: #784954;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+    border-bottom: 2px solid #784954; /* Cria uma linha separando o título do conteúdo */
+    padding-bottom: 8px;
+}
+
+.card-info ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.card-info li {
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+    color: #333;
+}
+
+.card-info li::before {
+    content: "•";
+    color: #784954;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.info-empresa h1 {
+    text-align: center;
+    color: #fdf7e6ff;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    padding-top: 20px;
+}
