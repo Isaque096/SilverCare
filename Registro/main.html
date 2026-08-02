@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang='pt-br'>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>SilverCare</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap">
+    <link rel='stylesheet' href='main.css'>
+</head>
+<body>
+    <header class="navbar">
+
+    <div class="logo">
+        <img src="outralogoOficial.png" alt="Logo SilverCare" class="logo_img">
+        <span class="logo_texto">SilverCare</span>
+    </div>
+    </header>
+    <section id="login" class="login">
+        <!-- Formulário de login -->
+        <form id="form_login" class="form_card_login animar_entrada">
+            <h1 class="header_login">Seja Bem-vindo de volta!</h1>
+            <div class="container_form">
+                <div class="container_email">
+                    <label for="email">E-mail
+                        <span class="texto_requerido">*</span>
+                    </label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="container_senha">
+                    <label for="senha">Senha
+                        <span class="texto_requerido">*</span>
+                    </label>
+                    <input type="password" id="senha" name="senha" required>
+                </div>
+                <div class="container_recuperacao">
+                    <button class="btn_recuperacao" id="btn_recuperacao" type="button"><span class="text_recuperacao">Esqueci minha senha</span>
+                    </button>
+                </div>
+                <div class="container_btn_login">
+                    <button class="btn_login" type="submit">Entrar</button>
+                </div>
+                <div class="span_registro">
+                    <span class="texto_registro">Não possui uma conta?</span>
+                    <button class="btn_registro" id="btn_registro" type="button"><span class="rtx_span_registro">Registrar-se</span></button>
+                </div>
+            </div>
+        </form>
+        <!-- formulário de registro -->     
+        <form id="form_registro" class="form_card_login form_rgt_escondido">
+            <h1 class="header_registro">Crie sua conta</h1>
+            <div class="container_form">
+                <div class="container_email">
+                    <label for="email_registro">E-mail
+                        <span class="texto_requerido">*</span>
+                    </label>
+                    <input type="email" id="email_registro" name="email_registro" required>
+                </div>
+                <div class="container_nome">
+                    <label for="nome">Nome
+                        <span class="texto_requerido">*</span>
+                    </label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                <div class="container_senha">
+                    <label for="senha_registro">Senha
+                        <span class="texto_requerido">*</span>
+                    </label>
+                    <input type="password" id="senha_registro" name="senha_registro" required>
+                </div>
+                <div class="container_confirmar_senha">
+                    <label for="confirmar_senha">Confirmar Senha
+                        <span class="texto_requerido">*</span>
+                    </label>
+                    <input type="password" id="confirmar_senha" name="confirmar_senha" required>
+                </div>
+                <div class="container_btn_registro">
+                    <button class="btn_cadastro" type="submit">Criar Conta</button>
+                </div>
+                <div class="span_login">
+                    <span class="texto_registro">Ja possui uma conta?</span>
+                    <button class="btn_rtn_login" id="btn_rtn_login" type="button"><span class="rtx_span_login">Entre aqui</span></button>
+                </div>
+            </div>
+        </form>
+        <div class="video_container">
+            <video autoplay muted loop playsinline><source src="videologo.mp4" type="video/mp4"></video>
+        </div>
+    </section>
+</body>
+
+<script>
+
+    // mudança de formulário de login para registro e vice-versa
+    const btnRegistro = document.getElementById('btn_registro');
+    const btnRtnLogin = document.getElementById('btn_rtn_login');
+    const formRegistro = document.getElementById('form_registro');
+    const formLogin = document.getElementById('form_login');
+
+    btnRegistro.addEventListener('click', () => {
+        formRegistro.classList.remove('form_rgt_escondido');
+        formLogin.classList.add('form_rgt_escondido');
+    });
+
+    btnRtnLogin.addEventListener('click', () => {
+        formRegistro.classList.add('form_rgt_escondido');
+        formLogin.classList.remove('form_rgt_escondido');
+    });
+
+   // verificação da confirmação de senha no formulário de registro 
+   const senhaInput = document.getElementById('senha_registro');
+   const confirmarSenhaInput = document.getElementById('confirmar_senha');
+
+    function validarSenhas() {
+    if (confirmarSenhaInput.value && senhaInput.value !== confirmarSenhaInput.value) {
+        confirmarSenhaInput.setCustomValidity('As senhas não coincidem');
+    } else {
+        confirmarSenhaInput.setCustomValidity('');
+        }}
+
+    senhaInput.addEventListener('input', validarSenhas);
+    confirmarSenhaInput.addEventListener('input', validarSenhas);
+
+    // animação de entrada do formulário de login/ transição de card de login para registro
+    btnRegistro.addEventListener('click', () => {
+    formRegistro.classList.remove('form_rgt_escondido');
+    formLogin.classList.add('form_rgt_escondido');
+
+    // reinicia a animação no form que está aparecendo
+    formRegistro.classList.remove('animar_entrada');
+    void formRegistro.offsetWidth; // força o navegador a "recalcular" antes de reaplicar
+    formRegistro.classList.add('animar_entrada');
+    });
+
+    btnRtnLogin.addEventListener('click', () => {
+    formRegistro.classList.add('form_rgt_escondido');
+    formLogin.classList.remove('form_rgt_escondido');
+
+    formLogin.classList.remove('animar_entrada');
+    void formLogin.offsetWidth;
+    formLogin.classList.add('animar_entrada');
+    }); 
+
+</script>
