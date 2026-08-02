@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -11,48 +16,135 @@ body {
     margin: 0;
     padding: 0;
     background-color: #9cc0c0;
-    overflow-y: hidden;
-    overflow-x: hidden;
 }
 
 .navbar {
+    flex-shrink: 0;
     background-color: #784954bb;
     color: #fff;
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    perspective: 1000px;
 }
 
-.navbar a.active {
-    font-weight: bold;
-    text-decoration: underline;
-    padding: 5px 10px;
+.navbar a.active::before {
+    content: "";
+    position: absolute;
+    inset: -6px;
     border-radius: 20px;
+    background: radial-gradient(
+        rgba(255,255,255,.35),
+        transparent 70%
+    );
+    filter: blur(8px);
+    z-index: -1;
+
+    animation: aura 2.5s ease-in-out infinite;
 }
 
+@keyframes aura {
+    0%,100% {
+        opacity: .5;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.15);
+    }
+}
 .navbar a {
     color: #fff;
     text-decoration: none;
     margin-left: 20px;
     transition: opacity 0.3s;
+    position: relative;  
+     display: inline-block;
+    position: relative;
+
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+
+    transition:
+        transform .45s cubic-bezier(.17,.89,.32,1.3),
+        color .3s ease,
+        opacity .3s ease,
+        text-shadow .3s ease;
 }
 
 .navbar a:hover {
-    opacity: 0.8;
+    animation: aproximarLink .45s cubic-bezier(.17,.89,.32,1.3) forwards;
+
+    opacity: 1;
+
+    text-shadow:
+        0 0 8px rgba(255,255,255,.8),
+        0 0 20px rgba(255,255,255,.5);
+}
+
+.navbar a:not(:hover) {
+    animation: voltarLink .35s ease forwards;
 }
 
 .logo {
     font-family: 'Pacifico', cursive;
     font-size: 24px;
+    display: inline-flex;
     color: #fff;
 }
+
+.logo span {
+    display: inline-block;
+    animation: onda 4s ease-in-out infinite, brilho-letra 4s ease-in-out infinite;
+}
+
+@keyframes onda {
+    0%   { transform: translateY(0); }
+    10%  { transform: translateY(-6px); }
+    20%  { transform: translateY(0); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes brilho-letra {
+    0% {
+        text-shadow: 0 0 4px rgba(255, 255, 255, 0.3);
+        color: #fff;
+    }
+    10% {
+        text-shadow: 0 0 10px rgba(253, 247, 230, 0.9), 0 0 18px rgba(253, 247, 230, 0.5);
+        color: #fdf7e6;
+    }
+    20% {
+        text-shadow: 0 0 4px rgba(255, 255, 255, 0.3);
+        color: #fff;
+    }
+    100% {
+        text-shadow: 0 0 4px rgba(255, 255, 255, 0.3);
+        color: #fff;
+    }
+}
+
+.logo span:nth-child(1)  { animation-delay: 0s,   0s; }
+.logo span:nth-child(2)  { animation-delay: 0.1s, 0.1s; }
+.logo span:nth-child(3)  { animation-delay: 0.2s, 0.2s; }
+.logo span:nth-child(4)  { animation-delay: 0.3s, 0.3s; }
+.logo span:nth-child(5)  { animation-delay: 0.4s, 0.4s; }
+.logo span:nth-child(6)  { animation-delay: 0.5s, 0.5s; }
+.logo span:nth-child(7)  { animation-delay: 0.6s, 0.6s; }
+.logo span:nth-child(8)  { animation-delay: 0.7s, 0.7s; }
+.logo span:nth-child(9)  { animation-delay: 0.8s, 0.8s; }
+.logo span:nth-child(10) { animation-delay: 0.9s, 0.9s; }
 
 .silverhome {
     display: flex;
     flex-direction: row;
     width: 100%;
     min-height: 100vh;
+    flex: 1;
+    min-height: 0;
     margin: 0;
     padding: 0;
     padding-top: 0; 
@@ -79,9 +171,11 @@ body {
 /* CONTAINER QUE SEGURA IMAGEM E TEXTO JUNTOS */
 .image-wrapper {
     position: relative;
-    display: inline-block;
-    width: auto;
-    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
 }
 
 /* CONTEÚDO SOBREPOSTO À IMAGEM */
@@ -125,14 +219,14 @@ body {
 
 
 .imagem1 {
-    width: 650px;
-    height: auto;
-    margin-bottom: 20px;
-    border-radius: 100%;
+    width: auto;
     max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 100%;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
 }
 
 .button-info {
@@ -152,7 +246,9 @@ body {
 }
 
 .imagem2 {
-    width: 650px;
+    width: auto;
+    max-width: 100%;
+    max-height: 90%;
     height: auto;
     margin-right: auto;
     margin-left: auto;
@@ -279,5 +375,134 @@ body {
     
     .logo-container {
         border-radius: 0px 0px 0px 0px;
+    }
+}
+/* ===== ANIMAÇÃO DE HOVER + LOGIN/REGISTER (adicionado) ===== */
+
+.navbar a.login-link {
+    opacity: 0.9;
+}
+
+.navbar {
+    perspective: 1000px;
+}
+
+.navbar a.btn-Entrar {
+    display: inline-block;
+    position: relative;
+
+    background-color: #fdf7e6;
+    color: #784954;
+    font-weight: bold;
+    padding: 6px 16px;
+    border-radius: 20px;
+    margin-left: 20px;
+
+    transform: scale(1) translateZ(0);
+
+    transition:
+        transform .55s cubic-bezier(.17,.89,.32,1.49),
+        box-shadow .35s ease,
+        filter .35s ease,
+        background-color .35s ease;
+}
+
+.navbar a.btn-Entrar:hover {
+
+    animation: aproximarBotao .55s cubic-bezier(.17,.89,.32,1.49) forwards;
+
+    filter: brightness(1.04);
+}
+
+.navbar a.btn-Entrar:not(:hover) {
+    animation: afastarBotao .35s ease forwards;
+}
+
+@keyframes aproximarBotao {
+
+    0% {
+        transform: scale(1) translateZ(0);
+    }
+
+    100% {
+        transform: scale(1.04) translateZ(30px);
+    }
+
+}
+
+@keyframes afastarBotao {
+
+    0% {
+        transform: scale(1.04) translateZ(20px);
+    }
+
+    100% {
+        transform: scale(1) translateZ(0);
+    }
+
+}
+
+.navbar a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -2px;
+    width: 0%;
+    height: 2px;
+    background-color: #fdf7e6;
+    border-radius: 2px;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+.navbar a:hover::after {
+    width: 70%;
+}
+
+.navbar a.active::after {
+    display: none;
+}
+
+.navbar a.btn-Entrar::after {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .navbar a.btn-Entrar {
+        margin-left: 10px;
+        padding: 5px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar a.btn-Entrar {
+        padding: 4px 10px;
+        font-size: 11px;
+    }
+}
+
+@keyframes aproximarLink {
+
+    0% {
+        transform: scale(1);
+    }
+
+    60% {
+        transform: scale(1.12);
+    }
+
+    100% {
+        transform: scale(1.08);
+    }
+}
+
+@keyframes voltarLink {
+
+    0% {
+        transform: scale(1.08);
+    }
+
+    100% {
+        transform: scale(1);
     }
 }
