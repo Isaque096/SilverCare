@@ -3,7 +3,7 @@
 <head>
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <title>Page Title</title>
+    <title>SilverCare</title>
     <link rel='stylesheet' href='main.css'>
 </head>
 <body>
@@ -20,21 +20,64 @@
             <a href='../Registro/main.html' class="btn-Entrar">Entrar</a>
         </nav>
     </header>
-    <section id="Suporte" class="suporte">
-        <h1>Central de Suporte</h1>
-        <br>
-        <p>Estamos aqui para cuidar de você em todos os momentos.</p>
-        <br><br>
-        <div class="pesquisa-spt">
-            <p>Como podemos te ajudar?</p>
-            <input type="text" placeholder="Digite sua dúvida ou problema...">
-            <button>Pesquisar</button>
-        </div>
-        <br><br>
-        <div class="duvida-spt">
-            <h3>Duvidas Frequentes</h3>
-            <br>
-            <ul>
+
+    <main id="Suporte" class="info-suporte">
+
+        <!-- ===== ABERTURA ===== -->
+        <section class="sup-hero">
+            <span class="sup-pill">Central de suporte</span>
+            <h1>Estamos aqui para cuidar de você em todos os momentos</h1>
+            <p class="sup-lead">Como podemos te ajudar?</p>
+
+            <form class="sup-busca" role="search" id="form-busca">
+                <label for="busca">Digite sua dúvida ou problema</label>
+                <div class="sup-busca-linha">
+                    <input type="text" id="busca" placeholder="Digite sua dúvida ou problema..." autocomplete="off">
+                    <button type="submit">Pesquisar</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- ===== CANAIS DE ATENDIMENTO ===== -->
+        <section class="sup-canais" aria-label="Canais de atendimento">
+            <a class="sup-canal" href="https://api.whatsapp.com/send?phone=5581987231694" target="_blank" rel="noopener">
+                <span class="sup-canal-icone">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.7-5A8.5 8.5 0 1 1 21 11.5z"/></svg>
+                </span>
+                <span>
+                    <h3>WhatsApp</h3>
+                    <p>Fale com a nossa equipe pelo celular.</p>
+                </span>
+            </a>
+
+            <a class="sup-canal" href="https://mail.google.com/mail/?view=cm&to=SilverCare0@gmail.com" target="_blank" rel="noopener">
+                <span class="sup-canal-icone">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 7l8.5 6 8.5-6"/></svg>
+                </span>
+                <span>
+                    <h3>E-mail</h3>
+                    <p>Envie sua mensagem e responderemos por lá.</p>
+                </span>
+            </a>
+
+            <a class="sup-canal" href="#" target="_blank" rel="noopener">
+                <span class="sup-canal-icone">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 21V4"/><path d="M5 4h11l-2 4 2 4H5"/></svg>
+                </span>
+                <span>
+                    <h3>Reclame aqui</h3>
+                    <p>Algo não saiu como esperado? Conte para a gente.</p>
+                </span>
+            </a>
+        </section>
+
+        <!-- ===== DÚVIDAS FREQUENTES ===== -->
+        <section class="sup-secao" id="duvidas">
+            <div class="sup-cabeca">
+                <h2 class="sup-titulo">Dúvidas frequentes</h2>
+            </div>
+
+            <ul class="sup-faq" id="lista-faq">
                 <li><a href="#">Como agendar um atendimento?</a></li>
                 <li><a href="#">Posso escolher o profissional?</a></li>
                 <li><a href="#">Quais são os serviços oferecidos?</a></li>
@@ -43,27 +86,57 @@
                 <li><a href="#">Como funciona a consulta online?</a></li>
                 <li><a href="#">Quais são os métodos de pagamento?</a></li>
             </ul>
-        </div>
-        <br><br>
-        <div class="atend-spt">
-            <h3>Canais de atendimento</h3>
-            <ul>
-                <li><a href="https://api.whatsapp.com/send?phone=5581987231694" target="_blank" rel="noopener">Whatsapp</a></li>
-                <li><a href="https://mail.google.com/mail/?view=cm&to=SilverCare0@gmail.com" target="_blank" rel="noopener">E-mail</a></li>
-            </ul>
-        </div>
-        <br>
-        <div class="reclame-spt">
-            <a href="#" target="_blank" rel="noopener">Reclame aqui</a>
-        </div>
-        <br><br>
-        <div class="hrs-spt">
-            <h3>Horário de Funcionamento</h3>
-            <p>Segunda a Sexta: 8h às 18h</p>
-            <p>Sábado: 9h às 14h</p>
-        </div>
-    </section>
+            <p class="sup-vazio" id="faq-vazio" hidden>Nenhuma pergunta encontrada. Fale com a gente pelo WhatsApp ou por e-mail.</p>
+        </section>
+
+        <!-- ===== HORÁRIO ===== -->
+        <section class="sup-horario">
+            <h2>Horário de funcionamento</h2>
+            <dl class="sup-dias">
+                <div>
+                    <dt>Segunda a sexta</dt>
+                    <dd>8h às 18h</dd>
+                </div>
+                <div>
+                    <dt>Sábado</dt>
+                    <dd>9h às 14h</dd>
+                </div>
+            </dl>
+        </section>
+
+    </main>
 
     <script src="JS.js"> </script>
+    <script>
+    /* Pesquisa: filtra as dúvidas frequentes enquanto a pessoa digita */
+    (function () {
+        var campo = document.getElementById('busca');
+        var form = document.getElementById('form-busca');
+        var itens = document.querySelectorAll('#lista-faq li');
+        var vazio = document.getElementById('faq-vazio');
+
+        function normalizar(t) {
+            return t.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+        }
+
+        function filtrar() {
+            var termo = normalizar(campo.value.trim());
+            var achou = 0;
+            itens.forEach(function (li) {
+                var ok = normalizar(li.textContent).indexOf(termo) !== -1;
+                li.hidden = !ok;
+                if (ok) achou++;
+            });
+            vazio.hidden = achou !== 0;
+        }
+
+        campo.addEventListener('input', filtrar);
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            filtrar();
+            document.getElementById('duvidas').scrollIntoView({ behavior: 'smooth' });
+        });
+    })();
+    </script>
 </body>
 </html>
