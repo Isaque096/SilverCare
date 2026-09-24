@@ -1,3 +1,9 @@
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    display: none; /* Chrome, Edge, Safari */
+}
+
 * {
     margin: 0;
     padding: 0;

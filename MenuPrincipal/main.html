@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang='pt-br'>
+
 <head>
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
@@ -8,62 +9,332 @@
     <link rel='stylesheet' href='CSS/main.css'>
     <link rel="stylesheet" href="CSS/transicao.css">
 </head>
+
 <body>
 
-     <!--inicio do codigo da transiçao-->
+    <!--inicio do codigo da transiçao-->
     <div class="stage">
 
-    <div class="loader" id="loader">
-      <div class="loader-ring"></div>
-      <div class="loader-track"><div class="loader-fill" id="loaderFill"></div></div>
-      <div class="loader-label">CARREGANDO</div>
-    </div>
+        <div class="loader" id="loader">
+            <div class="loader-ring"></div>
+            <div class="loader-track">
+                <div class="loader-fill" id="loaderFill"></div>
+            </div>
+            <div class="loader-label">CARREGANDO</div>
+        </div>
 
-    <div class="scene" id="scene">
-      <div class="ambient"></div>
-      <div class="avatar-wrap">
-        <img src="imagens/outraalogo.png" alt="SilverCare avatar">
-      </div>
-      <div class="wordmark" id="wordmark">
-        <span id="word-silver"></span><span id="word-care"></span>
-        <span class="sweep"></span>
-      </div>
-      <div class="tagline">
-        <div>Cuidado domiciliar</div>
-        <div>da mulher idosa</div>
-      </div>
+        <div class="scene" id="scene">
+            <div class="ambient"></div>
+            <div class="avatar-wrap">
+                <img src="imagens/outraalogo.png" alt="SilverCare avatar">
+            </div>
+            <div class="wordmark" id="wordmark">
+                <span id="word-silver"></span><span id="word-care"></span>
+                <span class="sweep"></span>
+            </div>
+            <div class="tagline">
+                <div>Cuidado domiciliar</div>
+                <div>da mulher idosa</div>
+            </div>
+        </div>
     </div>
-  </div>
-  <script src="JS/transicao.js"> </script>
-  <!--ternmino da transiçao-->
+    <script src="JS/transicao.js"> </script>
+    <!--termino da transiçao-->
 
     <header class="navbar">
         <div class="logo">
-    <span>S</span><span>i</span><span>l</span><span>v</span><span>e</span><span>r</span><span>C</span><span>a</span><span>r</span><span>e</span>
-</div>
+            <span>S</span><span>i</span><span>l</span><span>v</span><span>e</span><span>r</span><span>C</span><span>a</span><span>r</span><span>e</span>
+        </div>
         <nav>
             <a href="../MenuPrincipal/main.html" class="active">Home</a>
             <a href='../Suporte/main.html'>Suporte</a>
             <a href='../Servicos/main.html'>Serviços</a>
-             <a href='../Agenda/main.html'>Agenda</a>
-            <a href='../Empresa/main.html'>Empresa</a>
+            <a href='../Agenda/main.html'>Agenda</a>
             <a href='../Registro/main.html' class="btn-Entrar">Entrar</a>
         </nav>
     </header>
+
     <section id="Home" class="silverhome">
-        <div class="logo-container">
-            <!-- CONTAINER PARA SOBREPOSIÇÃO -->
-            <div class="image-wrapper">
-                <img class="imagem1" src="imagens/Gemini_Generated_Image_edc260edc260edc2.png" alt="Home">
-                <div class="overlay-content">
-                    <p class="subtitle">Cuidado humanizado para a mulher idosa no conforto do lar</p>
-                    <button class="button-info" onclick="window.location.href='../Servicos/main.html'">Mais informações</button>
+        <div class="hero-grid">
+
+            <div class="hero-texto">
+                <span class="hero-badge">Cuidado domiciliar especializado</span>
+                <h1>Cuidado de verdade para a mulher idosa, no lar dela</h1>
+                <p class="hero-sub">Cuidadoras selecionadas e acompanhamento próximo da família, todos os dias, sem sair
+                    de casa.</p>
+
+                <div class="hero-ctas">
+                    <button class="btn-primario" onclick="window.location.href='../Agenda/main.html'">Agendar
+                        avaliação</button>
+                    <button class="btn-secundario" onclick="window.location.href='../Servicos/main.html'">Conhecer
+                        serviços</button>
+                </div>
+
+                <div class="hero-prova">
+                    <div><strong>500+</strong><span>famílias atendidas</span></div>
+                    <div><strong>4.9/5</strong><span>avaliação média</span></div>
+                    <div><strong>24h</strong><span>suporte à família</span></div>
                 </div>
             </div>
-        </div>
-        <div class="fundo-img">
-            <img class="imagem2" src="imagens/Copilot_20260329_160923.png" alt="Home Background">
+
+            <div class="hero-visual">
+                <div class="hero-card">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#7A4B5C" stroke-width="1.8">
+                        <circle cx="12" cy="8" r="3.2" />
+                        <path d="M5 20c0-3.5 3.1-6 7-6s7 2.5 7 6" />
+                    </svg>
+                    <h3>Cuidadora verificada</h3>
+                    <p>Antecedentes checados e treinamento em cuidado domiciliar.</p>
+                </div>
+                <div class="hero-card hero-card--accent hero-card--tall">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#FBF7EE" stroke-width="1.8">
+                        <path
+                            d="M12 21s-7-4.35-9.3-8.6C1.1 8.9 3 5.5 6.4 5.5c2 0 3.3 1.1 5.6 3.3 2.3-2.2 3.6-3.3 5.6-3.3 3.4 0 5.3 3.4 3.7 6.9C19 16.65 12 21 12 21z" />
+                    </svg>
+                    <h3>Cuidado diário</h3>
+                    <p>Rotina de saúde, higiene e companhia acompanhada de perto.</p>
+                </div>
+                <div class="hero-card">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#7A4B5C" stroke-width="1.8">
+                        <rect x="3" y="4" width="18" height="17" rx="2" />
+                        <path d="M3 9h18M8 2v4M16 2v4" />
+                    </svg>
+                    <h3>Agenda flexível</h3>
+                    <p>Horários definidos com a família, ajustados quando precisar.</p>
+                </div>
+            </div>
+
         </div>
     </section>
+    <section id="cuidados-idosa" class="silv-cards-saude">
+ 
+    <div class="cards-cabecalho">
+        <h2>Cuidados e novidades para você</h2>
+        <p>Informações e produtos selecionados pensando no bem-estar da mulher idosa</p>
+    </div>
+ 
+    <div class="cards-trilho" id="trilhoCards">
+ 
+        <!-- CARD 1 — exemplo de NOTÍCIA -->
+        <article class="card-saude">
+            <span class="card-saude-tag card-saude-tag--noticia">Notícia</span>
+            <img src="https://via.placeholder.com/260x150.png?text=Not%C3%ADcia" alt="">
+            <div class="card-saude-corpo">
+                <h3>Osteoporose: 5 hábitos que ajudam a fortalecer os ossos</h3>
+                <p class="card-saude-fonte">Fonte: Portal da Saúde</p>
+                <a href="#" class="card-saude-link">Ler matéria →</a>
+            </div>
+        </article>
+ 
+        <!-- CARD 2 — exemplo de PRODUTO -->
+        <article class="card-saude">
+            <span class="card-saude-tag card-saude-tag--produto">Produto</span>
+            <img src="https://via.placeholder.com/260x150.png?text=Produto" alt="">
+            <div class="card-saude-corpo">
+                <h3>Andador dobrável com assento</h3>
+                <p class="card-saude-fonte">Loja parceira · R$ 289,90</p>
+                <a href="#" class="card-saude-link">Ver produto →</a>
+            </div>
+        </article>
+ 
+        <!-- CARD 3 — exemplo de NOTÍCIA -->
+        <article class="card-saude">
+            <span class="card-saude-tag card-saude-tag--noticia">Notícia</span>
+            <img src="https://via.placeholder.com/260x150.png?text=Not%C3%ADcia" alt="">
+            <div class="card-saude-corpo">
+                <h3>Como prevenir quedas dentro de casa após os 60</h3>
+                <p class="card-saude-fonte">Fonte: Blog Vida Saudável</p>
+                <a href="#" class="card-saude-link">Ler matéria →</a>
+            </div>
+        </article>
+ 
+        <!-- CARD 4 — exemplo de PRODUTO -->
+        <article class="card-saude">
+            <span class="card-saude-tag card-saude-tag--produto">Produto</span>
+            <img src="https://via.placeholder.com/260x150.png?text=Produto" alt="">
+            <div class="card-saude-corpo">
+                <h3>Medidor de pressão digital de braço</h3>
+                <p class="card-saude-fonte">Loja parceira · R$ 129,00</p>
+                <a href="#" class="card-saude-link">Ver produto →</a>
+            </div>
+        </article>
+ 
+        <!-- CARD 5 — exemplo de NOTÍCIA -->
+        <article class="card-saude">
+            <span class="card-saude-tag card-saude-tag--noticia">Notícia</span>
+            <img src="https://via.placeholder.com/260x150.png?text=Not%C3%ADcia" alt="">
+            <div class="card-saude-corpo">
+                <h3>Alimentação rica em cálcio: o que priorizar no dia a dia</h3>
+                <p class="card-saude-fonte">Fonte: Portal da Saúde</p>
+                <a href="#" class="card-saude-link">Ler matéria →</a>
+            </div>
+        </article>
+ 
+    </div>
+ 
+    <div class="cards-controles">
+        <button class="seta seta-esq" id="setaEsq" aria-label="Ver cards anteriores">‹</button>
+        <button class="seta seta-dir" id="setaDir" aria-label="Ver próximos cards">›</button>
+    </div>
+ 
+</section>
+
+<section id="empresa-home" class="empresa-home">
+    <div id="Empresa" class="info-empresa">
+
+        <section class="emp-hero">
+            <div class="emp-hero-texto">
+                <span class="emp-pill">Sobre a empresa</span>
+                <h1 class="emp-digitando">Cuidado integral e humanizado para a mulher idosa, em casa</h1>
+                <p class="emp-lead">A SilverCare é uma empresa especializada em enfermagem domiciliar, dedicada ao cuidado integral e humanizado da mulher idosa. Nosso objetivo é proporcionar saúde, conforto e segurança no ambiente familiar, respeitando a individualidade e melhorando a qualidade de vida em todas as fases do envelhecimento. Atuamos com profissionais qualificados e preparados para atender diferentes necessidades, sempre com ética, responsabilidade e acolhimento.</p>
+
+                <div class="emp-botoes">
+                    <a href="../Agenda/main.html" class="emp-btn emp-btn-cheio">Agendar avaliação</a>
+                    <a href="../Servicos/main.html" class="emp-btn emp-btn-vazado">Conhecer serviços</a>
+                </div>
+
+                <dl class="emp-fatos">
+                    <div><dt>No lar</dt><dd>atendimento domiciliar</dd></div>
+                    <div><dt>Sob medida</dt><dd>plano de cuidados individual</dd></div>
+                    <div><dt>Em família</dt><dd>participação ativa</dd></div>
+                </dl>
+            </div>
+
+            <div class="emp-painel">
+                <article class="emp-tile">
+                    <svg class="emp-icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="0.8" fill="currentColor"/></svg>
+                    <h3>Missão</h3>
+                    <p>Oferecer assistência de enfermagem domiciliar humanizada e integral à mulher idosa, promovendo conforto, segurança e qualidade de vida no ambiente familiar.</p>
+                </article>
+                <article class="emp-tile emp-tile-vinho">
+                    <svg class="emp-icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5s-8-4.9-8-11A4.6 4.6 0 0 1 8.5 5c1.5 0 2.8.8 3.5 2 .7-1.2 2-2 3.5-2A4.6 4.6 0 0 1 20 9.5c0 6.1-8 11-8 11z"/></svg>
+                    <h3>Nosso compromisso</h3>
+                    <p>Cuidar é mais do que tratar, é acolher, respeitar e promover dignidade. Nosso compromisso é estar presente em cada momento, oferecendo um cuidado humano, seguro e de qualidade.</p>
+                </article>
+                <article class="emp-tile">
+                    <svg class="emp-icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>
+                    <h3>Visão</h3>
+                    <p>Ser referência em cuidado domiciliar especializado na saúde da mulher idosa, garantindo autonomia, bem-estar e envelhecimento saudável no lar.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="emp-secao">
+            <h2 class="emp-titulo">O que guia o nosso trabalho</h2>
+            <div class="emp-duas">
+                <article class="emp-cartao">
+                    <h3>Valores</h3>
+                    <ul class="emp-lista">
+                        <li>Humanização no atendimento</li>
+                        <li>Ética e responsabilidade profissional</li>
+                        <li>Respeito à autonomia da paciente</li>
+                        <li>Cuidado individualizado</li>
+                        <li>Acolhimento do paciente e da família</li>
+                    </ul>
+                </article>
+                <article class="emp-cartao">
+                    <h3>Nosso diferencial</h3>
+                    <p>Nosso serviço vai além do cuidado técnico. Trabalhamos com foco no bem-estar completo da paciente, oferecendo:</p>
+                    <ul class="emp-lista">
+                        <li>Atendimento no conforto do lar</li>
+                        <li>Plano de cuidados personalizado</li>
+                        <li>Participação ativa da família no processo de cuidado</li>
+                        <li>Foco na prevenção de complicações</li>
+                        <li>Redução de internações hospitalares</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section class="emp-secao">
+            <h2 class="emp-titulo">Como funciona</h2>
+            <p class="emp-sub">Nosso atendimento é simples, acessível e eficaz.</p>
+            <ol class="emp-passos">
+                <li><span class="emp-num">1</span><p>O cliente realiza o agendamento</p></li>
+                <li><span class="emp-num">2</span><p>É feita uma avaliação inicial do paciente</p></li>
+                <li><span class="emp-num">3</span><p>Elaboramos um plano de cuidado individualizado, caso ainda não exista</p></li>
+                <li><span class="emp-num">4</span><p>Iniciamos o acompanhamento domiciliar</p></li>
+                <li><span class="emp-num">5</span><p>Monitoramos continuamente a evolução do paciente</p></li>
+            </ol>
+        </section>
+
+        <section class="emp-secao">
+            <div class="emp-faixa">
+                <div class="emp-faixa-texto">
+                    <h2 class="emp-titulo emp-titulo-claro">Nossa equipe</h2>
+                    <p>Contamos com uma equipe qualificada e comprometida com a excelência no cuidado:</p>
+                    <ul class="emp-lista emp-lista-clara">
+                        <li>Enfermeiro responsável técnico</li>
+                        <li>Técnicos de enfermagem capacitados</li>
+                        <li>Apoio multiprofissional, como fisioterapeutas, nutricionistas e psicólogos, quando necessário</li>
+                    </ul>
+                    <p>Todos os profissionais atuam com ética, empatia e respeito, garantindo um atendimento seguro e humanizado.</p>
+                </div>
+                <div class="emp-faixa-tiles">
+                    <article class="emp-tile">
+                        <h3>Segurança e qualidade</h3>
+                        <p>Prezamos pela segurança e qualidade em todos os atendimentos. Nossos profissionais possuem formação adequada e seguem rigorosamente as normas e boas práticas da área da saúde.</p>
+                    </article>
+                    <article class="emp-tile">
+                        <h3>Área de atuação</h3>
+                        <p>Atendemos em domicílio, oferecendo praticidade e conforto para pacientes e familiares, com serviços adaptados às necessidades de cada caso.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="emp-secao emp-final">
+            <div class="emp-chamada">
+                <h2>Vamos começar pela avaliação inicial?</h2>
+                <a href="../Agenda/main.html" class="emp-btn emp-btn-creme">Agendar avaliação</a>
+            </div>
+        </section>
+    </div>
+</section>
+ 
+<script>
+    // Faz as setas rolarem a trilha de cards — troque por lógica de fetch quando plugar o backend
+    (function () {
+        const trilho = document.getElementById('trilhoCards');
+        const esq = document.getElementById('setaEsq');
+        const dir = document.getElementById('setaDir');
+        const passo = 280; // largura aproximada de 1 card + gap
+ 
+        if (!trilho) return;
+        esq.addEventListener('click', () => trilho.scrollBy({ left: -passo, behavior: 'smooth' }));
+        dir.addEventListener('click', () => trilho.scrollBy({ left: passo, behavior: 'smooth' }));
+    })();
+
+    (function () {
+        const empresa = document.querySelector('.empresa-home');
+        const h1 = empresa?.querySelector('.emp-digitando');
+        if (!h1 || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+        const texto = h1.textContent.trim();
+        h1.setAttribute('aria-label', texto);
+        h1.innerHTML = '<span class="emp-digitado" aria-hidden="true"></span><span class="emp-resto" aria-hidden="true"></span>';
+        h1.classList.add('escrevendo');
+
+        const digitado = h1.querySelector('.emp-digitado');
+        const resto = h1.querySelector('.emp-resto');
+        let i = 0;
+
+        function passo() {
+            digitado.textContent = texto.slice(0, i);
+            resto.textContent = texto.slice(i);
+            if (i < texto.length) {
+                i++;
+                setTimeout(passo, 45 + Math.random() * 40);
+            } else {
+                setTimeout(() => h1.classList.remove('escrevendo'), 1800);
+            }
+        }
+
+        setTimeout(passo, 400);
+    })();
+</script>
+ 
+
 </body>
+
 </html>

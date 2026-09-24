@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    display: none; /* Chrome, Edge, Safari */
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -10,7 +15,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #fbf6ef;
+    background-color: #fdf7e6;
     position: relative;
 }
 
@@ -19,7 +24,7 @@ body {
    ===================================================== */
 
 .navbar {
-    background-color: #784954bb;
+    background-color: #5a3540;
     color: #fff;
     padding: 10px 20px;
     display: flex;
@@ -248,7 +253,7 @@ body {
 
 .info-suporte {
     --vinho: #784954;
-    --vinho-escuro: #5f3a47;
+    --vinho-escuro: #5a3540;
     --salvia: #90a89b;
     --salvia-clara: #e3ebe6;
     --creme: #fbf6ef;
