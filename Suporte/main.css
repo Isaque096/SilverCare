@@ -581,4 +581,7 @@ body {
         padding: 32px 24px;
         border-radius: 24px;
     }
+    .nav-title{
+        justify-content: center;
+    }
 }

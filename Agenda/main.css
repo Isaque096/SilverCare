@@ -384,3 +384,8 @@ body {
         transform: scale(1);
     }
 }
+
+.nav-title{
+    justify-content: center;
+    align-items: center;
+}

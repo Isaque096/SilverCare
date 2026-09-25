@@ -703,6 +703,8 @@ body {
     color: var(--vinho-escuro);
 }
 
+
+
 .emp-fatos dd { font-size: .9rem; margin-top: 2px; }
 
 .emp-painel {
@@ -736,7 +738,7 @@ body {
 .emp-painel > .emp-tile:first-child { grid-column: 1; grid-row: 1; }
 .emp-painel > .emp-tile:last-child { grid-column: 1; grid-row: 2; }
 
-.emp-secao { padding: 0 0 96px; }
+.emp-secao {padding: 0 0 96px; }
 .emp-secao p {
     padding: 20px;
 }
@@ -786,14 +788,24 @@ body {
 .emp-final { padding-bottom: 0; }
 
 .emp-chamada {
-    background: var(--vinho);
-    border-radius: 32px;
+    color: white;
+    background: linear-gradient(
+    120deg,
+    rgba(121, 70, 83, 0.90),
+    rgba(183, 134, 137, 0.65)
+);
     padding: 48px 56px;
     display: flex;
     flex-wrap: wrap;
     gap: 24px 40px;
     align-items: center;
     justify-content: space-between;
+}
+
+.emp-chamada p{
+    font-size: 30px;
+    font-family: var(--serifa);
+    color:var(--vinho-escuro); 
 }
 
 .info-empresa .emp-chamada h2 { color: #fff; font-family: var(--serifa); font-weight: 400; font-size: clamp(1.6rem, 2.6vw, 2.1rem); }
@@ -816,3 +828,934 @@ body {
     .emp-secao,
     .emp-hero { padding-bottom: 64px; }
 }
+
+/* ============================
+   SERVIÇOS DE CUIDADO DOMICILIAR
+============================ */
+
+.servicos {
+    --creme: #fbf7e9;
+    --bege: #f0e8c9;
+    --vinho: #794653;
+    --vinho-escuro: #59333d;
+    --rosa: #b78689;
+    --verde: #899783;
+    --dourado: #b69a70;
+    --lilas: #99859b;
+    --texto: #554b4c;
+    --branco: #fffdf9;
+
+    width: calc(100% - 50px);
+    max-width: 1500px;
+    margin: 25px auto;
+    padding: 75px 5% 65px;
+    background: var(--creme);
+    border-radius: 24px;
+    color: var(--texto);
+    overflow: hidden;
+}
+
+/* Cabeçalho */
+
+.servicos-header {
+    max-width: 760px;
+    margin: 0 auto 60px;
+    text-align: center;
+}
+
+.servicos-tag {
+    display: inline-block;
+    padding: 9px 24px;
+    margin-bottom: 22px;
+
+    border: 1px solid var(--vinho);
+    border-radius: 30px;
+
+    color: var(--vinho);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.servicos-header h2 {
+    margin: 0;
+    color: var(--vinho-escuro);
+
+    font-family: var(--serifa);
+    font-size: clamp(32px, 4vw, 52px);
+    font-weight: 400;
+    line-height: 1.12;
+    letter-spacing: -1.5px;
+}
+
+.servicos-header h2 span {
+    display: block;
+    color: var(--vinho);
+}
+
+.servicos-header p {
+    max-width: 620px;
+    margin: 24px auto 0;
+
+    color: #777071;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* Grade dos cards */
+
+.servicos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+
+    width: 100%;
+    max-width: 1450px;
+    margin: 0 auto;
+}
+
+/* Card individual */
+
+.servico-card {
+    --cor-card: var(--rosa);
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+    min-height: 290px;
+    padding: 30px 25px 45px;
+
+    background: var(--branco);
+    border: 1px solid rgba(121, 70, 83, 0.08);
+    border-radius: 18px;
+
+    box-shadow: 0 5px 20px rgba(85, 65, 55, 0.06);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+/* Cores dos cards */
+
+.servico-card.rosa {
+    --cor-card: var(--rosa);
+}
+
+.servico-card.verde {
+    --cor-card: var(--verde);
+}
+
+.servico-card.dourado {
+    --cor-card: var(--dourado);
+}
+
+.servico-card.lilas {
+    --cor-card: var(--lilas);
+}
+
+/* Hover */
+
+.servico-card:hover {
+    transform: translateY(-6px);
+
+    border-color: var(--cor-card);
+
+    box-shadow:
+        0 14px 30px rgba(85, 65, 55, 0.10);
+}
+
+/* Cabeçalho do card */
+
+.servico-topo {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    margin-bottom: 28px;
+}
+
+/* Ícones */
+
+.servico-icone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    width: 68px;
+    height: 68px;
+
+    color: white;
+    background: var(--cor-card);
+    border-radius: 50%;
+}
+
+.servico-icone svg {
+    width: 33px;
+    height: 33px;
+}
+
+/* Títulos */
+
+.servico-titulo {
+    min-width: 0;
+}
+
+.servico-titulo h3 {
+    margin: 0 0 9px;
+
+    color: var(--vinho-escuro);
+    font-family: var(--serifa);
+    font-size: clamp(17px, 1.5vw, 21px);
+    font-weight: 400;
+    line-height: 1.3;
+}
+
+.servico-titulo span {
+    display: block;
+
+    color: #898182;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 1.6;
+    text-transform: uppercase;
+}
+
+.titulo-linha {
+    width: 42px;
+    height: 2px;
+
+    margin-top: 15px;
+
+    background: var(--cor-card);
+    transition: width 0.3s ease;
+}
+
+.servico-card:hover .titulo-linha {
+    width: 65px;
+}
+
+/* Lista */
+
+.servico-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+}
+
+.servico-lista li {
+    position: relative;
+
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+
+    color: #696263;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Bolinha de confirmação */
+
+.servico-lista li::before {
+    content: "✓";
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    width: 18px;
+    height: 18px;
+    margin-top: 1px;
+
+    color: white;
+    background: var(--cor-card);
+    border-radius: 50%;
+
+    font-size: 10px;
+    font-weight: bold;
+}
+
+/* Seta do card */
+
+.servico-link {
+    position: absolute;
+    right: 25px;
+    bottom: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 35px;
+    height: 30px;
+
+    color: var(--cor-card);
+    text-decoration: none;
+
+    font-size: 28px;
+    line-height: 1;
+
+    transition:
+        transform 0.3s ease,
+        color 0.3s ease;
+}
+
+.servico-link:hover {
+    color: var(--vinho-escuro);
+    transform: translateX(5px);
+}
+
+/* =========================================
+   PLANO DE CUIDADOS — GLASSMORPHISM
+========================================= */
+
+.plano-cuidados {
+
+    position: relative;
+
+    width: 100%;
+    max-width: 1450px;
+
+    min-height: 330px;
+
+    margin: 60px auto 0;
+
+    padding: 55px;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+
+    /*
+    Fundo da sua paleta
+    */
+    background:
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(121, 70, 83, 0.28),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 10% 80%,
+            rgba(183, 134, 137, 0.25),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #eee4c8,
+            #f7f0dc
+        );
+
+    box-shadow:
+        0 20px 50px rgba(89, 51, 61, 0.10);
+}
+
+
+/* =========================================
+   ELEMENTOS DECORATIVOS
+========================================= */
+
+.plano-cuidados::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 320px;
+    height: 320px;
+
+    right: -120px;
+    top: -150px;
+
+    border-radius: 50%;
+
+    background: rgba(121, 70, 83, 0.16);
+
+    filter: blur(5px);
+
+    pointer-events: none;
+}
+
+
+.plano-cuidados::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 220px;
+    height: 220px;
+
+    left: -100px;
+    bottom: -130px;
+
+    border-radius: 50%;
+
+    background: rgba(183, 134, 137, 0.18);
+
+    filter: blur(8px);
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   VIDRO
+========================================= */
+
+.plano-glass {
+
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+
+    min-height: 220px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 40px;
+
+    padding: 15px 48px;
+
+    /*
+    Efeito vidro
+    */
+
+    background: rgba(255, 253, 249, 0.38);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    /*
+    Borda iluminada
+    */
+
+    border: 1px solid rgba(255, 255, 255, 0.65);
+
+    border-radius: 25px;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.7),
+        0 15px 35px rgba(89, 51, 61, 0.08);
+}
+
+
+/* =========================================
+   ÍCONE
+========================================= */
+
+.plano-icone {
+
+    position: relative;
+
+    flex-shrink: 0;
+
+    width: 105px;
+    height: 105px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--vinho);
+
+    background: rgba(255, 255, 255, 0.30);
+
+    border: 1px solid rgba(255, 255, 255, 0.7);
+
+    border-radius: 50%;
+
+    box-shadow:
+        inset 0 1px 5px rgba(255, 255, 255, 0.7),
+        0 10px 25px rgba(89, 51, 61, 0.08);
+
+    transition:
+        transform 0.4s ease,
+        background 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+
+.plano-icone::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 12px;
+
+    border-radius: 50%;
+
+    background: rgba(121, 70, 83, 0.82);
+
+    box-shadow:
+        0 5px 15px rgba(89, 51, 61, 0.15);
+}
+
+
+.plano-icone svg {
+
+    position: relative;
+    z-index: 2;
+
+    width: 42px;
+    height: 42px;
+
+    color: white;
+}
+
+
+/* Animação do ícone */
+
+.plano-glass:hover .plano-icone {
+
+    transform: scale(1.06) rotate(-3deg);
+
+    background: rgba(255, 255, 255, 0.45);
+
+    box-shadow:
+        inset 0 1px 5px rgba(255, 255, 255, 0.8),
+        0 15px 30px rgba(89, 51, 61, 0.14);
+}
+
+
+/* =========================================
+   CONTEÚDO
+========================================= */
+
+.plano-conteudo {
+
+    flex: 1;
+
+    min-width: 0;
+
+    padding-left: 30px;
+
+    border-left: 1px solid rgba(121, 70, 83, 0.25);
+}
+
+
+.plano-label {
+
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: var(--vinho);
+
+    font-size: 11px;
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+
+.plano-conteudo h3 {
+
+    margin: 0 0 15px;
+
+    color: var(--vinho-escuro);
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(30px, 3vw, 45px);
+
+    font-weight: 400;
+
+    line-height: 1.05;
+}
+
+
+.plano-conteudo h3 span {
+
+    display: block;
+
+    color: var(--vinho);
+
+    font-style: italic;
+}
+
+
+.plano-conteudo p {
+
+    max-width: 520px;
+
+    margin: 0;
+
+    color: #655b5c;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   BOTÃO DE FORMULÁRIO — com brilho giratório
+========================================= */
+
+.plano-botao {
+
+    position: relative;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+
+    min-width: 260px;
+
+    padding: 17px 22px;
+
+    color: var(--vinho-escuro);
+
+    overflow: hidden;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    border: none;
+    border-radius: 50px;
+
+    box-shadow: 0 10px 25px rgba(89, 51, 61, 0.10);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.plano-botao:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 15px 30px rgba(89, 51, 61, 0.18);
+}
+
+
+/* Camada do brilho giratório (fica por baixo; só aparece como um fio de 1px na borda) */
+
+.plano-botao-gradient {
+
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+
+    background: conic-gradient(
+        from 0deg,
+        rgba(255, 255, 255, 0.15) 0%,
+        rgba(255, 255, 255, 0.95) 12%,
+        rgba(255, 255, 255, 0.15) 24%
+    );
+}
+
+
+/* Camada de conteúdo (o vidro original, 1px pra dentro, deixando o brilho visível na borda) */
+
+.plano-botao-inner {
+
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+
+    width: 100%;
+
+    margin: 1px;
+    padding: 16px 21px;
+
+    color: var(--vinho-escuro);
+
+    /*
+    Vidro no botão
+    */
+
+    background: rgba(121, 70, 83, 0.55);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border-radius: 50px;
+
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.45);
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+
+.plano-botao:hover .plano-botao-inner {
+
+    background: rgba(121, 70, 83, 0.78);
+
+    color: white;
+}
+
+
+/* Google */
+
+.google-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+
+    flex-shrink: 0;
+
+    background: rgba(255, 255, 255, 0.92);
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.google-g {
+    font-family: Arial, sans-serif;
+    font-size: 21px;
+    font-weight: 700;
+
+    background: conic-gradient(
+        from -45deg,
+        #4285F4 0deg 90deg,
+        #34A853 90deg 180deg,
+        #FBBC05 180deg 270deg,
+        #EA4335 270deg 360deg
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+}
+
+
+.plano-botao-inner strong {
+
+    margin-left: auto;
+
+    font-size: 23px;
+
+    font-weight: 400;
+
+    transition: transform 0.3s ease;
+}
+
+
+.plano-botao:hover .plano-botao-inner strong {
+
+    transform: translateX(5px);
+}
+/* ============================
+   TABLET
+============================ */
+
+@media (max-width: 1050px) {
+
+    .servicos {
+        padding: 70px 4%;
+    }
+
+    .servicos-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .servico-card {
+        min-height: 280px;
+    }
+
+    .servico-titulo h3 {
+        font-size: 20px;
+    }
+
+    .servicos-cta {
+        gap: 22px;
+        padding: 30px;
+    }
+
+    .cta-icone {
+        width: 65px;
+        height: 65px;
+    }
+
+    .cta-texto {
+        padding-left: 22px;
+    }
+
+    .cta-botao {
+        padding: 15px 18px;
+    }
+}
+
+/* ============================
+   CELULAR
+============================ */
+
+@media (max-width: 650px) {
+
+    .servicos {
+        padding: 55px 20px;
+    }
+
+    .servicos-header {
+        margin-bottom: 35px;
+    }
+
+    .servicos-tag {
+        margin-bottom: 18px;
+        font-size: 10px;
+    }
+
+    .servicos-header h2 {
+        font-size: clamp(30px, 8vw, 40px);
+        letter-spacing: -0.8px;
+    }
+
+    .servicos-header p {
+        margin-top: 18px;
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .servicos-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .servico-card {
+        min-height: auto;
+        padding: 25px 22px 55px;
+        border-radius: 15px;
+    }
+
+    .servico-topo {
+        gap: 15px;
+        margin-bottom: 25px;
+    }
+
+    .servico-icone {
+        width: 58px;
+        height: 58px;
+    }
+
+    .servico-icone svg {
+        width: 29px;
+        height: 29px;
+    }
+
+    .servico-titulo h3 {
+        font-size: 19px;
+    }
+
+    .servico-titulo span {
+        font-size: 9px;
+    }
+
+    .servico-lista {
+        gap: 13px;
+    }
+
+    .servico-lista li {
+        font-size: 13px;
+    }
+
+    .servicos-cta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 22px;
+
+        margin-top: 35px;
+        padding: 28px 23px;
+
+        border-radius: 17px;
+    }
+
+    .cta-icone {
+        width: 58px;
+        height: 58px;
+    }
+
+    .cta-icone svg {
+        width: 30px;
+        height: 30px;
+    }
+
+    .cta-texto {
+        padding-left: 0;
+        border-left: none;
+    }
+
+    .cta-texto h3 {
+        font-size: 25px;
+        line-height: 1.3;
+    }
+
+    .cta-texto p {
+        font-size: 13px;
+    }
+
+    .cta-botao {
+        width: 100%;
+        padding: 16px;
+        white-space: normal;
+    }
+}
+
+/* Reduz animações para quem prefere menos movimento */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .servico-card,
+    .servico-link,
+    .titulo-linha,
+    .cta-botao,
+    .cta-botao span {
+        transition: none;
+    }
+
+    .servico-card:hover {
+        transform: none;
+    }
+}
+
+.navbar nav-title {
+    align-items: center;
+    justify-content: center;
+}
+
