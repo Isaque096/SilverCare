@@ -59,7 +59,7 @@
 
             <div class="hero-texto">
                 <span class="hero-badge">Cuidado domiciliar especializado</span>
-                <h1>Cuidado de verdade para a mulher idosa, no lar dela</h1>
+                <h1 class="emp-digitando">Cuidado de verdade para a mulher idosa, no lar dela</h1>
                 <p class="hero-sub">Cuidadoras selecionadas e acompanhamento próximo da família, todos os dias, sem sair
                     de casa.</p>
 
@@ -107,76 +107,125 @@
         </div>
     </section>
     <section id="cuidados-idosa" class="silv-cards-saude">
- 
+
     <div class="cards-cabecalho">
         <h2>Cuidados e novidades para você</h2>
         <p>Informações e produtos selecionados pensando no bem-estar da mulher idosa</p>
     </div>
- 
-    <div class="cards-trilho" id="trilhoCards">
- 
-        <!-- CARD 1 — exemplo de NOTÍCIA -->
-        <article class="card-saude">
-            <span class="card-saude-tag card-saude-tag--noticia">Notícia</span>
-            <img src="https://via.placeholder.com/260x150.png?text=Not%C3%ADcia" alt="">
-            <div class="card-saude-corpo">
-                <h3>Osteoporose: 5 hábitos que ajudam a fortalecer os ossos</h3>
-                <p class="card-saude-fonte">Fonte: Portal da Saúde</p>
-                <a href="#" class="card-saude-link">Ler matéria →</a>
+
+    <!-- Slider em rolagem automática e contínua (estilo marquee), igual ao usado em wegic.ai/pt-br -->
+    <div class="cards-trilho-mascara">
+        <div class="cards-trilho" id="trilhoCards">
+
+            <!-- Grupo 1 (conteúdo real) -->
+            <div class="cards-grupo">
+                <article class="card-saude">
+                    <span class="card-saude-tag card-saude-tag--noticia">Notícia</span>
+                    <img src="https://via.placeholder.com/260x150.png?text=Not%C3%ADcia" alt="">
+                    <div class="card-saude-corpo">
+                        <h3>Osteoporose: 5 hábitos que ajudam a fortalecer os ossos</h3>
+                        <p class="card-saude-fonte">Fonte: Portal da Saúde</p>
+                        <a href="#" class="card-saude-link">Ler matéria →</a>
+                    </div>
+                </article>
+
+                <article class="card-saude">
+                    <span class="card-saude-tag card-saude-tag--produto">Produto</span>
+                    <img src="https://via.placeholder.com/260x150.png?text=Produto" alt="">
+                    <div class="card-saude-corpo">
+                        <h3>Andador dobrável com assento</h3>
+                        <p class="card-saude-fonte">Loja parceira · R$ 289,90</p>
+                        <a href="#" class="card-saude-link">Ver produto →</a>
+                    </div>
+                </article>
+
+                <article class="card-saude">
+                    <span class="card-saude-tag card-saude-tag--noticia">Notícia</span>
+                    <img src="https://via.placeholder.com/260x150.png?text=Not%C3%ADcia" alt="">
+                    <div class="card-saude-corpo">
+                        <h3>Como prevenir quedas dentro de casa após os 60</h3>
+                        <p class="card-saude-fonte">Fonte: Blog Vida Saudável</p>
+                        <a href="#" class="card-saude-link">Ler matéria →</a>
+                    </div>
+                </article>
+
+                <article class="card-saude">
+                    <span class="card-saude-tag card-saude-tag--produto">Produto</span>
+                    <img src="https://via.placeholder.com/260x150.png?text=Produto" alt="">
+                    <div class="card-saude-corpo">
+                        <h3>Medidor de pressão digital de braço</h3>
+                        <p class="card-saude-fonte">Loja parceira · R$ 129,00</p>
+                        <a href="#" class="card-saude-link">Ver produto →</a>
+                    </div>
+                </article>
+
+                <article class="card-saude">
+                    <span class="card-saude-tag card-saude-tag--noticia">Notícia</span>
+                    <img src="https://via.placeholder.com/260x150.png?text=Not%C3%ADcia" alt="">
+                    <div class="card-saude-corpo">
+                        <h3>Alimentação rica em cálcio: o que priorizar no dia a dia</h3>
+                        <p class="card-saude-fonte">Fonte: Portal da Saúde</p>
+                        <a href="#" class="card-saude-link">Ler matéria →</a>
+                    </div>
+                </article>
             </div>
-        </article>
- 
-        <!-- CARD 2 — exemplo de PRODUTO -->
-        <article class="card-saude">
-            <span class="card-saude-tag card-saude-tag--produto">Produto</span>
-            <img src="https://via.placeholder.com/260x150.png?text=Produto" alt="">
-            <div class="card-saude-corpo">
-                <h3>Andador dobrável com assento</h3>
-                <p class="card-saude-fonte">Loja parceira · R$ 289,90</p>
-                <a href="#" class="card-saude-link">Ver produto →</a>
+
+            <!-- Grupo 2 (cópia idêntica, apenas para fechar o loop sem cortar) -->
+            <div class="cards-grupo" aria-hidden="true">
+                <article class="card-saude">
+                    <span class="card-saude-tag card-saude-tag--noticia">Notícia</span>
+                    <img src="https://via.placeholder.com/260x150.png?text=Not%C3%ADcia" alt="">
+                    <div class="card-saude-corpo">
+                        <h3>Osteoporose: 5 hábitos que ajudam a fortalecer os ossos</h3>
+                        <p class="card-saude-fonte">Fonte: Portal da Saúde</p>
+                        <a href="#" class="card-saude-link" tabindex="-1">Ler matéria →</a>
+                    </div>
+                </article>
+
+                <article class="card-saude">
+                    <span class="card-saude-tag card-saude-tag--produto">Produto</span>
+                    <img src="https://via.placeholder.com/260x150.png?text=Produto" alt="">
+                    <div class="card-saude-corpo">
+                        <h3>Andador dobrável com assento</h3>
+                        <p class="card-saude-fonte">Loja parceira · R$ 289,90</p>
+                        <a href="#" class="card-saude-link" tabindex="-1">Ver produto →</a>
+                    </div>
+                </article>
+
+                <article class="card-saude">
+                    <span class="card-saude-tag card-saude-tag--noticia">Notícia</span>
+                    <img src="https://via.placeholder.com/260x150.png?text=Not%C3%ADcia" alt="">
+                    <div class="card-saude-corpo">
+                        <h3>Como prevenir quedas dentro de casa após os 60</h3>
+                        <p class="card-saude-fonte">Fonte: Blog Vida Saudável</p>
+                        <a href="#" class="card-saude-link" tabindex="-1">Ler matéria →</a>
+                    </div>
+                </article>
+
+                <article class="card-saude">
+                    <span class="card-saude-tag card-saude-tag--produto">Produto</span>
+                    <img src="https://via.placeholder.com/260x150.png?text=Produto" alt="">
+                    <div class="card-saude-corpo">
+                        <h3>Medidor de pressão digital de braço</h3>
+                        <p class="card-saude-fonte">Loja parceira · R$ 129,00</p>
+                        <a href="#" class="card-saude-link" tabindex="-1">Ver produto →</a>
+                    </div>
+                </article>
+
+                <article class="card-saude">
+                    <span class="card-saude-tag card-saude-tag--noticia">Notícia</span>
+                    <img src="https://via.placeholder.com/260x150.png?text=Not%C3%ADcia" alt="">
+                    <div class="card-saude-corpo">
+                        <h3>Alimentação rica em cálcio: o que priorizar no dia a dia</h3>
+                        <p class="card-saude-fonte">Fonte: Portal da Saúde</p>
+                        <a href="#" class="card-saude-link" tabindex="-1">Ler matéria →</a>
+                    </div>
+                </article>
             </div>
-        </article>
- 
-        <!-- CARD 3 — exemplo de NOTÍCIA -->
-        <article class="card-saude">
-            <span class="card-saude-tag card-saude-tag--noticia">Notícia</span>
-            <img src="https://via.placeholder.com/260x150.png?text=Not%C3%ADcia" alt="">
-            <div class="card-saude-corpo">
-                <h3>Como prevenir quedas dentro de casa após os 60</h3>
-                <p class="card-saude-fonte">Fonte: Blog Vida Saudável</p>
-                <a href="#" class="card-saude-link">Ler matéria →</a>
-            </div>
-        </article>
- 
-        <!-- CARD 4 — exemplo de PRODUTO -->
-        <article class="card-saude">
-            <span class="card-saude-tag card-saude-tag--produto">Produto</span>
-            <img src="https://via.placeholder.com/260x150.png?text=Produto" alt="">
-            <div class="card-saude-corpo">
-                <h3>Medidor de pressão digital de braço</h3>
-                <p class="card-saude-fonte">Loja parceira · R$ 129,00</p>
-                <a href="#" class="card-saude-link">Ver produto →</a>
-            </div>
-        </article>
- 
-        <!-- CARD 5 — exemplo de NOTÍCIA -->
-        <article class="card-saude">
-            <span class="card-saude-tag card-saude-tag--noticia">Notícia</span>
-            <img src="https://via.placeholder.com/260x150.png?text=Not%C3%ADcia" alt="">
-            <div class="card-saude-corpo">
-                <h3>Alimentação rica em cálcio: o que priorizar no dia a dia</h3>
-                <p class="card-saude-fonte">Fonte: Portal da Saúde</p>
-                <a href="#" class="card-saude-link">Ler matéria →</a>
-            </div>
-        </article>
- 
+
+        </div>
     </div>
- 
-    <div class="cards-controles">
-        <button class="seta seta-esq" id="setaEsq" aria-label="Ver cards anteriores">‹</button>
-        <button class="seta seta-dir" id="setaDir" aria-label="Ver próximos cards">›</button>
-    </div>
- 
+
 </section>
 
 <section id="empresa-home" class="empresa-home">
@@ -185,7 +234,7 @@
         <section class="emp-hero">
             <div class="emp-hero-texto">
                 <span class="emp-pill">Sobre a empresa</span>
-                <h1 class="emp-digitando">Cuidado integral e humanizado para a mulher idosa, em casa</h1>
+                <h1>Cuidado integral e humanizado para a mulher idosa, em casa</h1>
                 <p class="emp-lead">A SilverCare é uma empresa especializada em enfermagem domiciliar, dedicada ao cuidado integral e humanizado da mulher idosa. Nosso objetivo é proporcionar saúde, conforto e segurança no ambiente familiar, respeitando a individualidade e melhorando a qualidade de vida em todas as fases do envelhecimento. Atuamos com profissionais qualificados e preparados para atender diferentes necessidades, sempre com ética, responsabilidade e acolhimento.</p>
 
                 <div class="emp-botoes">
@@ -221,6 +270,7 @@
 
         <section class="emp-secao">
             <h2 class="emp-titulo">O que guia o nosso trabalho</h2>
+             <p>Nosso serviço vai além do cuidado técnico. Trabalhamos com foco no bem-estar completo da paciente, oferecendo:</p>
             <div class="emp-duas">
                 <article class="emp-cartao">
                     <h3>Valores</h3>
@@ -234,7 +284,6 @@
                 </article>
                 <article class="emp-cartao">
                     <h3>Nosso diferencial</h3>
-                    <p>Nosso serviço vai além do cuidado técnico. Trabalhamos com foco no bem-estar completo da paciente, oferecendo:</p>
                     <ul class="emp-lista">
                         <li>Atendimento no conforto do lar</li>
                         <li>Plano de cuidados personalizado</li>
@@ -291,23 +340,11 @@
         </section>
     </div>
 </section>
- 
-<script>
-    // Faz as setas rolarem a trilha de cards — troque por lógica de fetch quando plugar o backend
-    (function () {
-        const trilho = document.getElementById('trilhoCards');
-        const esq = document.getElementById('setaEsq');
-        const dir = document.getElementById('setaDir');
-        const passo = 280; // largura aproximada de 1 card + gap
- 
-        if (!trilho) return;
-        esq.addEventListener('click', () => trilho.scrollBy({ left: -passo, behavior: 'smooth' }));
-        dir.addEventListener('click', () => trilho.scrollBy({ left: passo, behavior: 'smooth' }));
-    })();
 
+<script>
+    // Efeito de digitação — agora aplicado ao PRIMEIRO título (hero da Home)
     (function () {
-        const empresa = document.querySelector('.empresa-home');
-        const h1 = empresa?.querySelector('.emp-digitando');
+        const h1 = document.querySelector('.emp-digitando');
         if (!h1 || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
         const texto = h1.textContent.trim();
@@ -333,7 +370,7 @@
         setTimeout(passo, 400);
     })();
 </script>
- 
+
 
 </body>
 
